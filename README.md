@@ -1,7 +1,7 @@
 # logmonitor
 
 
-logmonitor
+Summary
 ==========
 logmonitor is a python script to monitor log  files.
 
