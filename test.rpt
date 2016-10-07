@@ -1,0 +1,22 @@
+
+ logmonitor 1.05 - Log Monitor
+
+
+
+ Subject: test logmonitor
+
+ Checking log files every 2 seconds ...
+
+
+
+
+=== Summary of Matching Counts ===
+--- ./test1_monitored.log ---
+pattern12=0
+--- ./test2_monitored.log ---
+pattern21=0
+pattern22=0
+
+
+
+
