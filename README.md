@@ -103,8 +103,8 @@ The console for logmonitor would be look alike:
         # ./step2.sh
 ```
 
-
      The console for logmonitor would be look alike:
+
 ```sh
         # python logmonitor test.ini
         Press Ctrl+C to exit
