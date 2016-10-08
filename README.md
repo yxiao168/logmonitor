@@ -21,9 +21,7 @@ For each pattern variable, It uses a "filter pattern" to match all possible
 messages first; then to use multiple "post negative patterns" to eliminate all
 false-positive messages. See "Syntax of Log Section" in detail.
 
-
-
-invicta.ini - pre-defined configuration file for INVICTA system.
+invicta.ini is a pre-defined configuration file for INVICTA system.
 
 
 
@@ -99,11 +97,12 @@ The console for logmonitor would be look alike:
 
   (4). from another console, append a line onto test2_monitored.log matching
        the regular expression defined in test.ini
+
 ```sh       
         # ./step2.sh
 ```
 
-     The console for logmonitor would be look alike:
+       The console for logmonitor would be look alike:
 
 ```sh
         # python logmonitor test.ini
