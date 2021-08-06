@@ -188,7 +188,7 @@ def CreateRptFile(logMonitorCfgFile):
     WriteLine("")
 
 
-def ReadConfigSecion(config, section, sectionDictionary):
+def ReadConfigSection(config, section, sectionDictionary):
     try:
         options = config.options(section)
     except ConfigParser.NoSectionError:
@@ -199,7 +199,7 @@ def ReadConfigSecion(config, section, sectionDictionary):
         sectionDictionary[option] = config.get(section, option)
 
 
-def ReadMonitorSecion(config, section, monitor):
+def ReadMonitorSection(config, section, monitor):
     try:
         options = config.options(section)
     except ConfigParser.NoSectionError:
@@ -218,11 +218,11 @@ def ReadConfigFile(config, sectionDictionary):
     global _logmonitor_
     global _monitorlist_
     global _interval_
-    ReadConfigSecion(config, 'logmonitor', sectionDictionary)
+    ReadConfigSection(config, 'logmonitor', sectionDictionary)
     _interval_ = int(_logmonitor_['interval'])
     for logFileSection in _logmonitor_['logs'].split(','):
         monitor = Monitor(logFileSection)
-        ReadMonitorSecion(config, logFileSection, monitor)
+        ReadMonitorSection(config, logFileSection, monitor)
         _monitorlist_.append(monitor)
 
 
